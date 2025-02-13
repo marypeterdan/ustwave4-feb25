@@ -1,0 +1,5 @@
+package com.stackroute.movieapp.service;
+
+public interface MovieService {
+
+}

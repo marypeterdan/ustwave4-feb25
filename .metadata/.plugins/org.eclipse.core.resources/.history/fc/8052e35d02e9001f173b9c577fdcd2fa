@@ -1,0 +1,63 @@
+package com.stackroute.movieapp.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.stackroute.movieapp.entity.Movie;
+import com.stackroute.movieapp.exceptions.MovieIdNotFoundException;
+import com.stackroute.movieapp.repo.MovieRepo;
+
+@Service
+public class MovieServiceImpl implements MovieService{
+	
+	@Autowired
+	MovieRepo repo;
+
+	@Override
+	public Movie addMovie(Movie movie) {
+		
+		return repo.save(movie);
+	}
+
+	@Override
+	public List<Movie> getAllMovies() {
+	 
+		return repo.findAll();
+	}
+
+	@Override
+	public Movie updateMovie(Movie movie) throws MovieIdNotFoundException {
+		
+	Optional<Movie> movieopt=repo.findById(movie.getMovieid());
+	
+	if(movieopt.isPresent())
+		
+ 		return repo.save(movie);
+	else
+		
+		throw new MovieIdNotFoundException("Id doesnt exist");
+	
+	}
+
+	@Override
+	public boolean deleteMovie(int movieid) throws MovieIdNotFoundException {
+	
+		Optional<Movie> movieopt=repo.findById(movieid);
+		
+		if(movieopt.isPresent())
+		{
+			repo.deleteById(movieid);
+	 		return true;
+		}
+		else 
+			
+			throw new MovieIdNotFoundException("Id doesnt exist");
+		
+		
+		
+	}
+  // obj==null 
+}

@@ -1,0 +1,138 @@
+body, h1,h2,h3,h4,ul
+{
+    margin: 0px;
+}
+
+body
+{
+    background-color: lightseagreen;
+}
+
+.clsheader 
+{
+    background-color:black;
+    text-align: center;
+  color: yellow;
+
+}
+.clsdiv
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+nav ul
+{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.clsheader img
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    border:5px solid white;
+}
+
+.clshero
+{
+    height: 300px;
+    background: url('./images/plaindark.jpg');
+}
+.clsmask
+{
+    height: 300px;
+  background:rgb(80,10,120,0.3);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content:space-between */
+}
+
+#imgcake
+{
+    width: 200px;
+    height: 200px;
+    margin: 0px auto;
+}
+
+a
+{
+    text-decoration: none;
+    background: yellow;
+    border-radius: 10px;
+    border: 5px solid white;
+    width: 120px;
+    height: 20px;
+    margin: 0px auto;
+}
+
+.clsrow
+
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.clspaper img
+{
+    width: 250px;
+    height: 200px;
+}
+
+.clspaper
+{
+    /* height: 250px;
+    width: 200px; */
+    box-shadow: 2px 3px 5px red;
+}
+
+.clscontainer
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.clsfooter
+{
+    display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+
+  background-color:black;
+  text-align: center;
+color: yellow;
+}
+
+@media (max-width:500px)
+{
+    .clsrow
+        {
+            display: flex;
+            flex-direction: column;
+        }
+        #idcake
+        {
+            display: none;
+        }
+
+        #idpick
+        {
+            display: none;
+        }
+
+        .clsh1
+        {
+            font-size: small;
+            font-weight: lighter;
+        }
+
+
+}

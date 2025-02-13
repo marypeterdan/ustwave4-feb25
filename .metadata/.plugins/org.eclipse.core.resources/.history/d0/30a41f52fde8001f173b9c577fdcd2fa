@@ -1,0 +1,15 @@
+package com.stackroute.movieapp.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.stackroute.movieapp.service.MovieService;
+
+@RestController
+public class MovieController {
+	
+	
+	@Autowired
+	MovieService mservice;
+
+}
