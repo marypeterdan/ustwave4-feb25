@@ -1,0 +1,21 @@
+.clsh1
+{
+    color: darkgreen;
+}
+
+.clsnav
+{
+     border-bottom: 2px solid red;
+     background-color: aqua !important;
+}
+
+ .carousel-item img
+ {
+    height: 300px;
+ }
+
+ div img
+ {
+    width: 200px;
+    height: 200px;
+ }
